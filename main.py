@@ -12,19 +12,26 @@ from PIL import ImageDraw
 
 colors = {'black': (0, 0, 0),
           'white': (255, 255, 255),
-          'red': (237, 30, 36),
+          'red': (237, 31, 36),
           'blue': (141, 213, 245),
-          'green': (22, 155, 98),
-          'yellow': (255, 207, 46)
+          'green': (51, 254, 46),
+          'yellow': (251, 208, 45),
+          'orange': (250, 154, 45),
+          'purple': (180, 45, 255),
+          'gray': (150, 150, 150)
           }
 fonts = {'arial_nar': ImageFont.truetype("/Library/Fonts/Arial Narrow.ttf", 8),
          'arial': ImageFont.truetype("/Library/Fonts/Arial.ttf", 8),
          'arial_b': ImageFont.truetype("/Library/Fonts/Arial Black.ttf", 12),
          'monaco': ImageFont.truetype("/Library/Fonts/Monaco.dfont", 11)}
-marker_colors = ['blue', 'red', 'yellow']
+marker_colors = ['blue', 'red', 'yellow','purple','green','gray','orange']
 text_colors = {'blue': 'black',
                'red': 'white',
-               'yellow': 'black'}
+               'yellow': 'black',
+               'purple': 'white',
+               'green': 'black',
+               'gray': 'white',
+               'orange': 'black'}
 
 
 def replace_color(img, rgb_original, rgb_new):

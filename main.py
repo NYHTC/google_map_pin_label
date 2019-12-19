@@ -57,13 +57,13 @@ def add_text(img, font, rgb, text):
     return img
 
 
-def create_images():
+def create_images(output_folder="output"):
     """Create images all colors/numbers."""
     for color in marker_colors:
         print('generating {} markers'.format(color))
 
         # create dirs if needed
-        color_path = os.path.join('images', color)
+        color_path = os.path.join(output_folder, color)
         if not os.path.exists(color_path):
             os.makedirs(color_path)
 
@@ -71,11 +71,11 @@ def create_images():
         for i in range(2000):
             img = Image.open("images/pin_thin_" + color + "_48.png")
             # img = replace_color(img, colors['white'], colors[color])
-            img = add_text(img, fonts['arial_b'], text_colors[color], str(i))
-            save_path = os.path.join('output', color, str(i) + '.png')
+            img = add_text(img, fonts["arial_b"], text_colors[color], str(i))
+            save_path = os.path.join(output_folder, color, str(i) + ".png")
             img.save(save_path)
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     create_images()

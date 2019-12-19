@@ -72,7 +72,7 @@ def create_images():
             img = Image.open("images/pin_thin_" + color + "_48.png")
             # img = replace_color(img, colors['white'], colors[color])
             img = add_text(img, fonts['arial_b'], text_colors[color], str(i))
-            save_path = os.path.join('images', color, str(i) + '.png')
+            save_path = os.path.join('output', color, str(i) + '.png')
             img.save(save_path)
     return True
 
